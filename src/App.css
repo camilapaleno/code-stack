@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+
+}
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav ul {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: right;
+  width: 100%;
+  list-style: none;
+  color: #353535;
+  padding: 3rem 4rem;
+  margin: 0px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.nav ul li:first-child {
+  margin-right: auto;
+  margin-left: 0;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav ul li:first-child span{
+  color: #6b71e9;
+}
+
+.nav ul li{
+  padding: 0;
+  margin-left: 40px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0rem 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
+
+  background-color: #d9dffd;  /* fallback for old browsers */
+
+}
+
+.hero .text {
+  z-index: 99;
+  width: 40%;
+}
+
+.hero .text h1 {
+  color: #6b71e9;
+  font-size: 3rem;
+}
+
+.hero .text p {
+  color: #636363;
+}
+
+.hero .text a:first-of-type {
+  display: inline-block;
+  width: fit-content;
+  color: #fff;
+  background-color: #6b71e9;
+  padding: 12px 16px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero .text a {
+  display: inline-block;
+  width: fit-content;
+  color: #6b71e9;
+  padding: 12px 16px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.hero .text div {
+  display: inline-block;
+  margin-top: 40px;
+  width: fit-content;
+}
+
+.hero .text div span {
+  color: #6b71e9;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 100px;
+}
+
+.hero .spline-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.hero .spline-container .spline {
+  width: 70%;
+}
+
+.user-items-list-simple .list-item-content__description p {
+  font-size: 18px;
   }
-  to {
-    transform: rotate(360deg);
+
+  @media screen and (min-width: 1600px) {
+  .user-items-list-simple[data-num-columns="6"] {
+      grid-template-columns: repeat(11,1fr);
+      grid-gap: 20px 10px;
   }
+
 }
